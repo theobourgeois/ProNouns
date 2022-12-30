@@ -127,7 +127,7 @@ export const useGuess = () => {
 
     const handleCorrectness = (guess) => {
         let finalGuess = handleOffByOneGuesses(guess);
-        return finalGuess;
+        return finalGuess.toLowerCase();
     }
 
     /**
