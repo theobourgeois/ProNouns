@@ -7,7 +7,6 @@ const bodyParser = require('body-parser');
 
 const GOOGLE_API_KEY = 'AIzaSyBPt61qznQCX7KZNpScJzEhzeaw-zvTMyw'
 const SE_ID = '73a88720340b840eb'
-const PORT = "3001"
 
 const client = new GoogleImages(SE_ID, GOOGLE_API_KEY);
 const app = express()
@@ -16,6 +15,8 @@ const sleep = require('util').promisify(setTimeout)
 app.use(cors())
 app.use(bodyParser.json());
 const server = http.createServer(app);
+
+const PORT = process.env.PORT || 8000; app.listen(PORT, () => { console.log(`App listening on port ${PORT}!`); });
 
 let difficulty = "easy"
 let cacheFileContents = {
@@ -170,10 +171,6 @@ function randNum(max) {
 }
 
 
-
-
-
 server.listen(PORT);
-console.log(server.address().port)
 
 
