@@ -14,7 +14,7 @@ const sleep = require('util').promisify(setTimeout)
 
 app.use(cors())
 app.use(bodyParser.json());
-const server = http.createServer(app);
+//const server = http.createServer(app);
 
 const PORT = process.env.PORT || 8000; app.listen(PORT, () => { console.log(`App listening on port ${PORT}!`); });
 
@@ -171,6 +171,5 @@ function randNum(max) {
 }
 
 
-server.listen(PORT);
 
 
