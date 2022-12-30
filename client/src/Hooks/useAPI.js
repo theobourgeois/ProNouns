@@ -2,7 +2,7 @@ import axios from "axios"
 import { useContext } from "react"
 import { DifficultyContext, HintsContext, ImageContext, WordContext } from "../Context"
 
-const API_URL = "http://localhost:3001"
+const API_URL = "https://pro-nouns.herokuapp.com/"
 
 
 export const useAPI = () => {
